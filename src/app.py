@@ -4,6 +4,11 @@ import streamlit as st
 
 model = load(open("models/rfc_default_21.sav", "rb"))
 tfidf = load(open("models/tfidf_vectorizer.sav", "rb"))
+
+with open("models/tfidf_vectorizer.sav", "rb") as f:
+    tfidf = load(f)
+
+
 class_dict = {
     "0": "Weak",
     "1": "Medium",
