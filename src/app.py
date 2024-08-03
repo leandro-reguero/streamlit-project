@@ -5,7 +5,7 @@ import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # accediendo a los datos
-model = load(open("models/rfc_default_21.sav", "rb"))
+model = load(open("rfc_default_21.sav", "rb"))
 @st.cache_data(ttl= 60*5, max_entries=20)
 def load_data():
     df = pd.read_csv("data/processed/balanced_data.csv")
